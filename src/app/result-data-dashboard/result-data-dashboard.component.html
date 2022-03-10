@@ -1,0 +1,38 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h1 class='titleClass' style="color:aliceblue">{{title}}</h1>
+        <div class="d-flex" >
+            <nav>
+              <a  routerLink="/todoDashboard" class="btn btn-success btn1" routerLinkActive="active">Create Models</a>
+            </nav>
+        </div>
+    </div>
+</nav>
+<table class="table table-bordered ">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">DataPoints</th>
+            <th scope="col">Type</th>
+            <th scope="col">Size</th>
+            <th scope="col">Seed</th>
+            <th scope="col">Dependency</th>
+            <th scope="col">Expression</th>
+            <th scope="col">Group</th>
+            <th scope="col">Result</th>
+        </tr>
+    </thead>
+    <tbody class="tableBody">
+        <tr *ngFor="let row of resultData">
+            <td>{{row.id}}</td>
+            <td>{{row.dataPoints}}</td>
+            <td>{{row.type}}</td>
+            <td>{{row.size}}</td>
+            <td>{{row.seed}}</td>
+            <td>{{row.dependency}}</td>
+            <td>{{row.expression}}</td>
+            <td>{{row.group}}</td>
+            <td>{{row.result}}</td>
+        </tr>
+    </tbody>
+</table>
